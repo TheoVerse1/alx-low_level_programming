@@ -1,9 +1,8 @@
 #include <stdio.h>
-
 /**
- * main - using put function to print the String
+ * main - prints the string in the put funtction
  *
- * Return will be 0
+ * The progam will always return 0
  */
 int main(void)
 {
