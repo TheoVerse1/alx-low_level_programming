@@ -2,6 +2,7 @@
 /**
  * main - prints the string in the put funtction
  *
+ *
  * The progam will always return 0
  */
 int main(void)
