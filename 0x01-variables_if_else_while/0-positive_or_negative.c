@@ -7,12 +7,9 @@
 /**
  * main - Prints positive, equals or negative numbers
  *
- * Return: Always(Success)
- * 
+ * Return: Always(Success) 
  */
-
 int main(void)
-
 {
 	int n;
 	
@@ -37,5 +34,4 @@ int main(void)
 		printf("%d is negative\n", n);
 	}
 	return (0);
-
 }
