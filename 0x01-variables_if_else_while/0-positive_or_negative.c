@@ -2,11 +2,14 @@
 
 #include <time.h>
 
-/* more headers goes there */
+#include <stdio.h>
 
-
-
-/* betty style doc for function main goes there */
+/**
+ * main - Prints positive, equals or negative numbers
+ *
+ * Return: Always(Success)
+ * 
+ */
 
 int main(void)
 
