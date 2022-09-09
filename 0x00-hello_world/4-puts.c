@@ -6,8 +6,12 @@
  *
  * Return: The progam will always return 0
  */
+
+
+//main function
 int main(void)
 {
+	//the body of the program. Where we put the puts fuction
 	puts("\"Programming is like building a multilingual puzzle");
 
 	return(0);
