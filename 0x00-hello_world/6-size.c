@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char c:
+	char c;
 	int i;
 	long int l;
 	long long int s;
