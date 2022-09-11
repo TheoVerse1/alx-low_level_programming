@@ -3,6 +3,8 @@
 /**
  * main - Where program runs
  *
+ * Description: Print the size of various types
+ *
  * Returns: Always 0 (Success)
  */
 int main(void)
