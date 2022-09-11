@@ -1,13 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Where program runs
+ * main - Prints the size of various types
  *
- * Description:	Print the size of various types
- *
- * Returns:	Always 0 (Success)
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	char c;
