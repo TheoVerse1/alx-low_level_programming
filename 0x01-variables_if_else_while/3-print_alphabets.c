@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char lowUP;
+	char lowUp;
 
 	for (lowUp = 'a'; lowUp <= 'z'; lowUp++)
 		putchar(lowUp);
