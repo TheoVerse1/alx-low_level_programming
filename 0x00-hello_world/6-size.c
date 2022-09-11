@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- *main - Where program runs
+ * main - Where program runs
  *
- * Description: Print the size of various types
+ * Description:	Print the size of various types
  *
- * Returns: Always 0 (Success)
+ * Returns:	Always 0 (Success)
  */
 
 int main(void)
