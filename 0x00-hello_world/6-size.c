@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - print the size of various types 
  *
  * Description: I will use the main function
