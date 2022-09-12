@@ -25,7 +25,7 @@ int main (void)
 					putchar(c);
 
 					if ( a == '7' && b == '8')
-						continuee;
+						continue;
 
 					putchar(',');
 					putchar(' ');
@@ -36,3 +36,4 @@ int main (void)
 	putchar('\n');
 	
 	return (0);
+}
