@@ -3,6 +3,8 @@
 /**
  * _islower - function that checks for lowercase character
  *
+ * @c: int for input of an integer
+ *
  * Return: 0
  */
 
