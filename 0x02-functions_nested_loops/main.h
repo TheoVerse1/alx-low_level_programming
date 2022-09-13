@@ -1,19 +1,19 @@
 #ifndef HOLBERTON_H_INCLUDED
 #define HOLBERTON_H_INCLUDED
 
-int _putchar(char c);
+int _putchar(char);
 void print_alphabet(void);
 void print_alphabet_x10(void);
 int _islower(int b);
 int _isalpha(int d);
 int print_sign(int s);
-int _abs(int a);
-int print_last_digit(int a);
+int _abs(int);
+int print_last_digit(int);
 void jack_bauer(void);
 void times_table(void);
 int add(int a, int b);
 void print_to_98(int n);
-void print_times_table(int n);
+void print_times_table(int c);
 void num(int r, int n);
 
 #endif
