@@ -2,27 +2,27 @@
 
 /**
  * _strncat - a function that concatenates two strings.
- * @dest: an input for a string
- * @src: an input for a string
- * @n: an input for an integer
+ * @dest: an input string
+ * @src: an input string
+ * @n: an input integer
  * Return: A pointer to the resulting string
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int sr = 0, a = 0;
+	int sl = 0, a = 0;
 	char *temp = dest, *start = src;
 
 	while (*src)
 	{
-		sr++;
+		sl++;
 		src++;
 	}
 
 	while (*dest)
 		dest++;
 
-	if (n > sr)
-		n = srclen;
+	if (n > sl)
+		n = sl;
 
 	src = start;
 
