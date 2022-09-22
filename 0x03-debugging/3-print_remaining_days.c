@@ -1,25 +1,37 @@
 #include <stdio.h>
 #include "main.h"
-#include <time.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_remaining_days - takes a date and prints how many days are
+ * left in the year, taking leap years into account
+ * @month: month in number format
+ * @day: day of month
+ * @year: year
+ * Return: void
  */
-int positive_or_negative(void)
+
+void print_remaining_days(int month, int day, int year)
 {
-	int n;
+	if (year % 4 == 0 || (year % 400 == 0 && !(year % 100 == 0)))
+	{
+		if (month >= 2)
+		{
+			day++;
+		}
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-
-	if (n > 0)
-		printf("%d is positive\n", n);
-	else if (n == 0)
-		printf("%d is zero\n", n);
+		printf("Day of the year: %d\n", day);
+		printf("Remaining days: %d\n", 366 - day);
+	}
 	else
-		printf("%d is negative\n", n);
-
-	return (0);
+	{
+		if (month == 2 && day == 60)
+		{
+			printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
+		}
+		else
+		{
+			printf("Day of the year: %d\n", day);
+			printf("Remaining days: %d\n", 365 - day);
+		}
+	}
 }
