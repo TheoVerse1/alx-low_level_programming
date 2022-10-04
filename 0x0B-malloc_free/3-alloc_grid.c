@@ -1,32 +1,44 @@
 #include "main.h"
-#include <stdlib.h>
+#include <stdlid.h>
 
 /**
- * alloc_grid - A function that returns a pointer to a
- * 2 dimensional array of integers
- * @width: An input integer at number of columns
- * @height: An input integer at number of rows
- * Return: pointer to a 2D array, NULL on failure
+ * alloc_grid - returns a pointer to a 2 dimensional array of integers
+ * @width: width of the array
+ * @height: height of the array
+ *
+ * Return: a pointer to a 2 dimensional array of integers
  */
 int **alloc_grid(int width, int height)
 {
-	int **array, i = 0, j = 0;
+	int a, b, **net;
 
 	if (width <= 0 || height <= 0)
-		return (NULL);
-
-	array = (int **)malloc(sizeof(int *) * height);
-	if (array == NULL)
-		return (NULL);
-	for (; i < height; i++)
 	{
-		array[i] = (int *)malloc(sizeof(int) * width);
-		if (array[i] == NULL)
-			return (NULL);
+		return ('\0');
 	}
 
-	for (i = 0; i < height; i++)
-		for (; j < width; j++)
-			array[i][j] = 0;
-	return (array);
+	net = malloc(sizeof(int *) * height);
+
+	if (net == NULL)
+	{
+		return (NULL);
+	}
+	for (a = 0 ; a < height ; a++)
+	{
+		net[a] = malloc(sizeof(int) * width);
+		if (net[a] == NULL)
+		{
+			for (a = a - 1; a >= 0 ; a--)
+			{
+				free(net[a]);
+			}
+			free(net);
+			return (NULL);
+		}
+		for (b = 0 ; b < width ; b++)
+		{
+			net[a][b] = 0;
+		}
+	}
+	return (net);
 }
