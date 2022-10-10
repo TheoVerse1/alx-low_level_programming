@@ -17,8 +17,7 @@ char *_copy(char *src)
 		return (NULL);
 	}
 
-	for (len = 0; src[len] != '\0'; len++)
-		;
+	for (len = 0; src[len] != '\0'; len++);
 
 	ptr = malloc(sizeof(char) * (len + 1));
 
@@ -43,7 +42,6 @@ char *_copy(char *src)
  * @owner:       Owner of the dog
  * Return:       Pointer to new dog variable
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *snoopie;
