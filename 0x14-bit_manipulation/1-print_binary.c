@@ -1,33 +1,20 @@
 #include "main.h"
+
 /**
- * print_binary - Entry Point
- * @n: dec input
- * Return: 0
+ * print_binary - prints binary of a number
+ * @n: decimal number to converted
  */
+
 void print_binary(unsigned long int n)
 {
-	int i = 0, count, k, temp;
-
-	if (n == 0)
+	/*state base condition*/
+	if (n <= 1)/*when n is 1 or 0 return*/
 	{
-		printf("0");
+		_putchar(n + '0');
 		return;
 	}
-
-	temp = n;
-
-	while (temp != 0)
-	{
-		i++;
-		temp = temp >> 1;
-	}
-
-	for (count = i - 1; count >= 0; count--)
-	{
-		k = n >> count;
-		if (k & 1)
-			printf("1");
-		else
-			printf("0");
-	}
+	/*using recursion and bitwise divide through by 2*/
+	print_binary(n >> 1);
+	/*when returning print remainder*/
+	_putchar((n & 1) + '0');
 }
