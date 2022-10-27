@@ -1,31 +1,48 @@
 #include "main.h"
-
 /**
- * binary_to_uint - Converts a binary number to an unsigned int.
- * @b: A pointer to a string of 0 and 1 chars.
- *
- * Return: If b is NULL or contains chars not 0 or 1 - 0.
- *         Otherwise - the converted number.
+ * _strlen - gets length of string for a const
+ * @b: pointer to string
+ * Return: length of string
  */
-unsigned int binary_to_uint(const char *b)
+int _strlen(const char *b)
 {
-	unsigned int num = 0, mult = 1;
-	int len;
+	/*declare vairables to be used*/
+	int count = 0;
 
-	if (b == '\0')
-		return (0);
-
-	for (len = 0; b[len];)
-		len++;
-
-	for (len -= 1; len >= 0; len--)
-	{
-		if (b[len] != '0' && b[len] != '1')
-			return (0);
-
-		num += (b[len] - '0') * mult;
-		mult *= 2;
+	while (b[count] != '\0')
+		count++;
+	return (count);
 }
 
-	return (num);
+/**
+ * binary_to_uint - convert binary number to unsigned int
+ * @b: pointer to a string
+ * Return: unisgned int
+ */
+
+unsigned int binary_to_uint(const char *b)
+{
+	/*declare variables to be used*/
+	unsigned int self_add = 1, decimal = 0, num = 0;
+	int len, i;
+	/*check if character is not NULL*/
+	if (!b)
+		return (0);
+	/*get string length*/
+	len = _strlen(b);
+	/*loop through characters and check if not 0 or 1*/
+	for (i = len - 1; i >= 0; i--)
+	{
+		if (b[i] != '0' && b[i] != '1')
+			return (0);/*there's a wrong character*/
+		/*check and convert*/
+		if (b[i] == '1')
+			num = self_add;
+		else
+			num = 0;
+
+		decimal += num;/*adds the decimal number*/
+		self_add += self_add;/*add self*/
+	}
+	return (decimal);
 }
