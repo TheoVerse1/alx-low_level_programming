@@ -1,23 +1,14 @@
 #include <stdio.h>
+#include <main.h>
+/**
+ * get_endianness - Write a function that checks the endianness.
+ * Prototype: int get_endianness(void).
+ * Return: 1, if architecture is little endian, 0 in case of big endian.
+ */
+int get_endianness(void)
+{
+	unsigned int x = 1;
+	char *c = (char *) &x;
 
-int get_endianness(void) {
-    unsigned int num = 1;
-    char* ptr = (char*)&num;
-    
-    // If the first byte of num contains 1, it's little endian
-    // Otherwise, it's big endian
-    return (int)(*ptr);
+	return ((int)*c);
 }
-
-int main() {
-    int endianness = get_endianness();
-    
-    if (endianness == 0) {
-        printf("The system is big endian.\n");
-    } else {
-        printf("The system is little endian.\n");
-    }
-    
-    return 0;
-}
-
